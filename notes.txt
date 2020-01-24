@@ -1,0 +1,13 @@
+
+admin info
+==================
+admin@gmail.com
+admin@123
+
+patients doctors
+=============
+patients@gmail.com
+doctors1@gmail.com
+doctors@gmail.com
+
+admin@123

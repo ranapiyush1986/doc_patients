@@ -1,0 +1,47 @@
+{% extends 'app_base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <h2>doctors</h2>
+
+  <!-- details table -->
+   <div class="row">
+    <div class="col-md-12 table-responsive">
+    <div class="common-table">
+     <table class="table my-pagination">
+      <thead>
+       <tr class="tr-head">
+        <th>Sl.No</th>
+        <th>Name</th>
+        <th></th>
+       </tr>
+      </thead>
+
+      <tbody>
+      {% if doctors %}
+          {% for doc in doctors %}
+      <tr class="tr-body">
+        <td>{{forloop.counter}}</td>
+        <td>{{doc.user.first_name}} {{doc.user.last_name}}</td>
+<!--        <td>{{doc.user_specialised}}</td>-->
+<!--        <td>{{doc.user_mobile}}</td>-->
+<!--        <td>{{doc.user_qualification}}</td>-->
+        <td><a href="/doctors/appointments/create/{{doc.pk}}" >select</a></td>
+      </tr>
+       {% endfor %}
+       {% else %}
+       <tr class="no-data">
+        <td colspan="20">No Data</td>
+       </tr>
+       {% endif %}
+      </tbody>
+
+      <tfoot></tfoot>
+     </table>
+     </div>
+   </div>
+  </div>
+  <!-- /details table -->
+
+{% endblock %}

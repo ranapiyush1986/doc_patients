@@ -1,0 +1,52 @@
+{% extends 'app_base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <h2>appointments</h2>
+
+<!-- details table -->
+   <div class="row">
+    <div class="col-md-12 table-responsive">
+    <div class="common-table">
+     <table class="table my-pagination">
+      <thead>
+       <tr class="tr-head">
+        <th>Sl.No</th>
+        <th>Doctor Name</th>
+        <th>Specialist</th>
+           <th>email</th>
+         <th>Time</th>
+        <th>Accepted</th>
+       </tr>
+      </thead>
+
+      <tbody>
+      {% if appointments %}
+          {% for doc in appointments %}
+      <tr class="tr-body">
+        <td>{{forloop.counter}}</td>
+        <td>{{doc.doctors.first_name}} {{doc.doctors.last_name}}</td>
+        <td>{{doc.doctors.specialised}}</td>
+          <td>{{doc.doctors.email}}</td>
+        <td>{{doc.date}} {{doc.time}}</td>
+        <td>{{doc.is_accepted}}</td>
+
+<!--        <td><a href="/doctors/appointments/create/{{doc.pk}}" >select</a></td>-->
+      </tr>
+       {% endfor %}
+       {% else %}
+       <tr class="no-data">
+        <td colspan="20">No Data</td>
+       </tr>
+       {% endif %}
+      </tbody>
+
+      <tfoot></tfoot>
+     </table>
+     </div>
+   </div>
+  </div>
+  <!-- /details table -->
+
+{% endblock %}
