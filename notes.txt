@@ -1,7 +1,7 @@
 
 admin info
 ==================
-admin@gmail.com
+admin@admin.com
 admin@123
 
 patients doctors
