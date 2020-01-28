@@ -3,7 +3,9 @@ db.sqlite3
 
 venv/
 db.sqlite3
-.idea
+.db_data
+../.idea
 *.pyc
 .env
 .vscode/
+.idea
