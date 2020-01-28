@@ -6,3 +6,4 @@ from doctors import models
 # admin.site.unregister(Group)
 admin.site.register(models.Doctors)
 admin.site.register(models.Appointments)
+admin.site.register(models.Specilaizations)

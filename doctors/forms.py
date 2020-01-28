@@ -1,6 +1,10 @@
 from django.forms import ModelForm
 from doctors import models
 
+class SpecializationForm(ModelForm):
+	class Meta:
+		model=models.Specilaizations
+		fields = '__all__'
 
 class DoctorsProfileForm(ModelForm):
 	class Meta:
