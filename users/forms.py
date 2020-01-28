@@ -26,13 +26,14 @@ class SignupForm(UserCreationForm):
     class Meta:
         model = models.User
         # fields = '__all__'
-        fields = ("first_name", "last_name", "email", "password2", "password1", "type")
+        fields = ("first_name", "last_name", "email","mobile", "password2", "password1", "type")
 
     def save(self, commit=True):
         user = super(SignupForm, self).save(commit=False)
         user.email = self.cleaned_data['email']
         user.first_name = self.cleaned_data["first_name"]
         user.last_name = self.cleaned_data["last_name"]
+        user.mobile = self.cleaned_data["mobile"]
         if commit:
             user.save()
         return user
