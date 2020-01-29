@@ -27,3 +27,25 @@ docker exec -it docpatients_web_1 bash -c "python manage.py createsuperuser"
 docker exec -it docpatients_web_1 bash -c "python manage.py makemigrations"
 
 docker exec -it docpatients_web_1 bash -c "python manage.py migrate"
+
+
+
+
+push docker images
+=====================================
+
+# container name
+docker commit docpatients_web_1
+
+
+docker images
+
+    REPOSITORY              TAG       IMAGE ID         CREATED           SIZE
+    verse_gapminder_gsl     latest    023ab91c6291     3 minutes ago     1.975 GB
+    verse_gapminder         latest    bb38976d03cf     13 minutes ago    1.955 GB
+    rocker/verse            latest    0168d115f220     3 days ago        1.954 GB
+
+
+docker tag bb38976d03cf dockhubusername/verse_gapminder:mytag
+docker login docker.io
+docker push dockhubusername/verse_gapminder:mytag
