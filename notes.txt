@@ -46,6 +46,11 @@ docker images
     rocker/verse            latest    0168d115f220     3 days ago        1.954 GB
 
 
-docker tag bb38976d03cf dockhubusername/verse_gapminder:mytag
+docker tag bb38976d03cf spyhunter1998/doc_patients:latest
 docker login docker.io
-docker push dockhubusername/verse_gapminder:mytag
+docker push spyhunter1998/doc_patients:latest
+
+
+run images
+========================
+docker run -d -p 8000:8000  spyhunter1998/doc_patients:doc_patients
