@@ -14,11 +14,11 @@ admin@123
 
 docker
 =================================
-docker compose up
+docker-compose up
 docker exec docpatients_web_1 "ls"
 
 
-docker compose up
+docker-compose up
 
 docker exec docpatients_web_1 bash -c "pip list"
 
