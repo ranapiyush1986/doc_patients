@@ -16,10 +16,13 @@
 <body>
 
     <header>
-<!--        <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">-->
-            <a class="navbar-brand" href="#">My Doctor</a>
+                  <a class="navbar-brand" href="#">My Doctor</a>
+
+    </header>
+    <aside>
                 {% if user.is_authenticated %}
                     <ul class="navbar-nav ">
+                        <li class="nav-item"> <a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item">
                             <a href="/user/profile" class="nav-link"> {{ user.email }} profiles</a>
                         </li>
@@ -40,17 +43,12 @@
                         <li class="nav-item"><a class="nav-link" href="/user/signup">signup</a></li>
                     </ul>
                 {% endif %}
-<!--        </nav>-->
-    </header>
+    </aside>
 
-    <main>
+     <main>
         {% block content %}
         {% endblock %}
     </main>
-
-    <aside>
-      Sidebar
-    </aside>
 
     <footer>
       Footer

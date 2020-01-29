@@ -7,7 +7,7 @@ body {
 
 header,
 footer {
-  grid-column: 1 / span 5;
+  grid-column: 1 / span 4;
 }
 
 header > ul{
@@ -20,22 +20,15 @@ header > ul{
 }
 
 main {
-  grid-column: 1 / span 3;
+  grid-column: 2 / span 3;
 
 }
 
 aside {
-  grid-column: span 2;
+  grid-column: span 1;
 }
 
-@media (max-width: 700px) {
 
-  main,
-  aside {
-    grid-column: 1 / span 5;
-  }
-
-}
 
 /* Demo Specific Styles */
 body {
